@@ -1,0 +1,19 @@
+We will only put one medicine in one compartment(we have 3 compartments):
+medName_1 :
+time_1:
+compartment_no.:
+dose_1:
+description_1:
+-----------------------------------------------------------------------------------------------------------
+description_1:
+medName_2 :
+time_2:
+compartment_no.:
+dose_2:
+description_2:
+-----------------------------------------------------------------------------------------------------------
+medName_3 :
+time_3:
+compartment_no.:
+dose_3:
+description_3:

@@ -1,0 +1,24 @@
+export default data = {1:[
+    {
+        compartmentNumber:1,
+        medicineName:'',
+        medicineDoze:'',
+        medicineTime:'',
+        medicineDescription:'',
+    },
+    {
+        compartmentNumber:2,
+        medicineName:'',
+        medicineDoze:'',
+        medicineTime:'',
+        medicineDescription:'',
+    },
+    {
+        compartmentNumber:3,
+        medicineName:'',
+        medicineDoze:'',
+        medicineTime:'',
+        medicineDescription:'',
+    }
+]
+}

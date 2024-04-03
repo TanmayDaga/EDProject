@@ -1,0 +1,93 @@
+@media(min-width: 768px){
+  .whole_form {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-image: url("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg");
+    background-size: cover;
+  }
+}
+@media(max-width: 767px){
+  .whole_form{
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+  .whole_form input[type="text"],
+  .whole_form input[type="time"],
+  .whole_form input[type="number"],
+  .whole_form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .whole_form textarea {
+    height: 150px;
+  }
+
+  /* Style the form labels */
+  .whole_form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  }
+
+  .whole_form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .whole_form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  section{
+    position: relative;
+    left: 530px;
+    width: 55px;
+    border: 2px #000000 solid;
+    border-radius: 5px;
+  }
+  section:hover{
+    scale: 1.1;
+    width: 55px;
+    border: 2px burlywood dashed;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  section a{
+    margin-left: 3px;
+    color: black;
+  }
+  section a:hover{
+    color: bisque;
+  }
+  button
+{
+  position: relative;
+  top:10px;
+  left: 20px;
+}
+button:hover{
+  scale: 1.1;
+  color: green;
+  border: 2px black dashed;
+  border-radius: 10px;
+  transition: 0.5s;
+}
