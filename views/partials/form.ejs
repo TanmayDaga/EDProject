@@ -1,4 +1,16 @@
-<form action="">
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medi-Box</title>
+  <link rel="stylesheet" href="actual.css" />
+  <link rel="icon" href="https://assets-global.website-files.com/63723fe799096ad12312edc2/63c6bdfec8ddd447434400c8_58.png">
+</head>
+<body>
+  <div class="whole_form">
+    <section class="history">
+      <a href="history.html" target="_blank">History</a>
+    </section><form >
     <fieldset>
       <legend>Enter the Info</legend>
       <p>
@@ -10,7 +22,12 @@
           required
           autofocus
           autocomplete="on"
+          <% if (isLoggedIn) {%>
+            readonly
+            value= <%= data[0].medicineName%>
+            <%}%>
         />
+
 
       </p>
       <p>
@@ -21,18 +38,13 @@
           id="time_1"
           required
           autocomplete="on"
+          <% if (isLoggedIn) { %>
+            readonly
+            value= <%= data[0].medicineTime%>
+            <% }%>
         />
       </p>
-      <p>
-        <label for="compartment_1">Enter the Compartment Number:</label>
-        <input
-          type="number"
-          name="compartment_1"
-          id="compartment_1"
-          required
-          autocomplete="on"
-        />
-      </p>
+      
       <p>
         <label for="dose_1">Enter the Dose:</label>
         <textarea
@@ -43,7 +55,13 @@
           placeholder="Enter the details regarding the dose here:"
           required
           autocomplete="on"
-        ></textarea>
+          <% if (isLoggedIn) { %>
+            readonly
+            <% } %>
+        >
+        <% if (isLoggedIn) { %>
+         <%= data[0].medicineDoze%>
+          <% } %></textarea>
       </p>
       <p>
         <label for="description_1">Enter the Description:</label>
@@ -54,7 +72,14 @@
           rows="10"
           placeholder="Enter the description here:"
           autocomplete="on"
-        ></textarea>
+          <% if (isLoggedIn) { %>
+            readonly
+      
+            <% }%>
+        >
+        <% if (isLoggedIn) { %>
+      <%= data[0].medicineDescription%>
+          <% } %></textarea>
       </p>
       <br><hr>
       <p>
@@ -66,6 +91,10 @@
           required
           autofocus
           autocomplete="on"
+          <% if (isLoggedIn) {%>
+            readonly
+            value= <%= data[1].medicineName%>
+            <%}%>
         />
       </p>
       <p>
@@ -76,18 +105,13 @@
           id="time_2"
           required
           autocomplete="on"
+          <% if (isLoggedIn) { %>
+            readonly
+            value= <%= data[1].medicineTime%>
+            <% } %>
         />
       </p>
-      <p>
-        <label for="compartment_2">Enter the Compartment Number:</label>
-        <input
-          type="number"
-          name="compartment_2"
-          id="compartment_2"
-          required
-          autocomplete="on"
-        />
-      </p>
+     
       <p>
         <label for="dose_2">Enter the Dose:</label>
         <textarea
@@ -98,7 +122,13 @@
           placeholder="Enter the details regarding the dose here:"
           required
           autocomplete="on"
-        ></textarea>
+          <% if (isLoggedIn) { %>
+            readonly
+          
+            <% }%>
+        ><% if (isLoggedIn) { %>
+          <%= data[1].medicineDoze%>
+          <% }%></textarea>
       </p>
       <p>
         <label for="description_2">Enter the Description:</label>
@@ -109,7 +139,13 @@
           rows="10"
           placeholder="Enter the description here:"
           autocomplete="on"
-        ></textarea>
+          <% if (isLoggedIn) { %>
+            readonly
+            
+            <% } %>
+        ><% if (isLoggedIn) { %>
+        <%= data[1].medicineDescription%>
+          <% } %></textarea>
       </p>
       <br><hr>
       <p>
@@ -121,6 +157,10 @@
           required
           autofocus
           autocomplete="on"
+          <% if (isLoggedIn) {%>
+            readonly
+            value= <%= data[2].medicineName%>
+            <% }%>
         />
       </p>
       <p>
@@ -131,18 +171,13 @@
           id="time_3"
           required
           autocomplete="on"
+          <% if (isLoggedIn) { %>
+            readonly
+            value= <%= data[2].medicineTime%>
+            <% } %>
         />
       </p>
-      <p>
-        <label for="compartment_3">Enter the Compartment Number:</label>
-        <input
-          type="number"
-          name="compartment_3"
-          id="compartment_3"
-          required
-          autocomplete="on"
-        />
-      </p>
+     
       <p>
         <label for="dose_3">Enter the Dose:</label>
         <textarea
@@ -153,7 +188,13 @@
           placeholder="Enter the details regarding the dose here:"
           required
           autocomplete="on"
-        ></textarea>
+          <% if (isLoggedIn) { %>
+            readonly
+          
+            <% }%>
+        > <% if (isLoggedIn) { %>
+           <%= data[2].medicineDoze%>
+          <% }%></textarea>
       </p>
       <p>
         <label for="description_3">Enter the Description:</label>
@@ -164,7 +205,19 @@
           rows="10"
           placeholder="Enter the description here:"
           autocomplete="on"
-        ></textarea>
+          <% if (isLoggedIn) { %>
+            readonly
+          
+            <% } %>
+        > <% if (isLoggedIn) { %>
+           <%= data[2].medicineDescription%>
+          <% } %></textarea>
       </p>
     </fieldset>
+
+    <%if (!isLoggedIn){%><button type="submit" formaction="http://172.31.16.85:6969/submit" formmethod="post"> Submit </button><%}%>
   </form>
+
+  
+  </div>
+</body>

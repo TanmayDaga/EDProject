@@ -1,4 +1,29 @@
-export default data = {1:[
+const data= {"1":[
+    {
+        compartmentNumber:1,
+        medicineName:'adf',
+        medicineDoze:'sfsdfda',
+        medicineTime:'12:39',
+        medicineDescription:'fsd',
+    },
+    {
+        compartmentNumber:2,
+        medicineName:'fsda',
+        medicineDoze:'sdfadfs',
+        medicineTime:'12:26',
+        medicineDescription:'fsda',
+    },
+    {
+        compartmentNumber:3,
+        medicineName:'dfsa',
+        medicineDoze:'dsafd',
+        medicineTime:'12:45',
+        medicineDescription:'dsfa',
+    }
+]
+}
+
+const  dataSchema= [
     {
         compartmentNumber:1,
         medicineName:'',
@@ -21,4 +46,4 @@ export default data = {1:[
         medicineDescription:'',
     }
 ]
-}
+module.exports = { data, dataSchema };
